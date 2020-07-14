@@ -1,4 +1,3 @@
-# ocean-planet
 Ocean Planet Game
 
 Game Closure Coding Challenge

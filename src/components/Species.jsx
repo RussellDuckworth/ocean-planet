@@ -99,6 +99,8 @@ export default class Species extends Component
 	activateRobot() {
 		util.rmClass(this.robotButon.current, 'gray');
 		util.addClass(this.robotButon.current, 'tint-photo');
+		util.rmClass(this.robotButon.current, 'affordable');
+		util.addClass(util.$(this.name+'-cost-robot'), 'invisible');
 	}
 
 	clickRobot(e) {
@@ -110,8 +112,6 @@ export default class Species extends Component
 			store.setItem(this.name+'-robot', true);
 			this.startGenerate();
 			util.dispatch('spend', this.mcost);
-			util.addClass(util.$(this.name+'-cost-robot'), 'invisible');
-			util.rmClass(this.robotButon.current, 'affordable');
 			this.activateRobot();
 		} else {
 			console.warn("you cannot afford the "+this.name+" robot");
@@ -170,6 +170,11 @@ export default class Species extends Component
 		let bg = 'url(/img/'+this.image+')';
 		this.portrait.current.style.backgroundImage = bg;
 		this.robot = store.getItem(this.name+'-robot');
+
+		if (this.robot) {
+			this.activateRobot();
+		}
+
 		if (!this.count) this.count = 0;
 		this.updateNameDisplay();
 		this.showAffordable();

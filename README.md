@@ -5,32 +5,30 @@ Game Closure Coding Challenge
 
 
 ## PLAY GAME:
-    - https://russduckworth.com:4243/
+https://russduckworth.com:4243/
 
 
 ## TIME CONSTRAINTS
 
 ### Problem:
-    - Minimal time to complete project.
+- Minimal time to complete project.
 
 ### Solution:
-    - Make it a simple web app.
-    - Use React for reusable UI components.
-    - Use NodeJS/Express for quick server.
-    - Avoid complex server component.
+- Make it a simple web app.
+- Use React for reusable UI components.
+- Use NodeJS/Express for quick server.
+- Avoid complex server component.
 
 
 ## THE METAPHOR
 
 ### Problem:
-    - Business metaphor doesn't scale logically. One cannot own twenty
-      thousand hockey teams, nor may one own 42 billion lemonade stands.
-    - "Manager"
+- Business metaphor doesn't scale logically. One cannot own twenty thousand hockey teams, nor may one own 42 billion lemonade stands.
+- "Manager"
 
 ###  Solution:
-    - Number of lifeforms inhabiting the Ocean planet scales in a more
-      satisfying and believable way.
-    - "Robot"
+- Number of lifeforms inhabiting the Ocean planet scales in a more satisfying and believable way.
+- "Robot"
 
 
 ## PERFORMANCE

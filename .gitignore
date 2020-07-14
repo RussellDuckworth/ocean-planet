@@ -1,0 +1,13 @@
+**/node_modules
+*.DS_Store
+**/migrations
+*.sublime-*
+**/log
+bundle.js*
+vendor.js*
+knexfile.js*
+photo
+marketing
+start
+startall
+forever*

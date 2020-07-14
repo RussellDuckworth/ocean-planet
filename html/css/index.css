@@ -1,0 +1,114 @@
+
+html {
+	--main-color: #00b5ff;
+	--main-color: #00d0ff;
+	--header-color: #001040dd;
+	--background-color: #00223f88;
+
+	/* tint to match ui color */
+	--tint-ui-b: 1;
+	--tint-ui-h: 150deg;
+	--tint-ui-s: 5;
+	--tint-ui-sep: 1;
+
+	/* tint photos */
+	--photo-filter-con: 1.2;
+	--photo-filter-bri: 0.8;
+	--photo-filter-sat: 2;
+	--photo-filter-hue: 0deg;
+
+	/* glow effect */
+	--shadow-color: #0088FF44;
+	--shadow-offset: 0px;
+	--shadow-blur: 3px;
+	--shadow-spread: 3px;
+}
+
+@font-face {
+	font-family: Oxygen-Regular;
+	src: url('/fonts/Oxygen-Regular.ttf');
+}
+
+body {
+	-webkit-text-size-adjust: none;
+	font-family:'Oxygen-Regular', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	height: 100vh;
+	width: 100%;
+	margin: 0pt;
+	padding: 0px;
+	color: var(--main-color);
+	background-color: black;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+body::-webkit-scrollbar {
+  /*display: none;*/
+}
+
+.ocean-glow {
+	box-shadow: var(--shadow-offset)
+							var(--shadow-offset)
+							var(--shadow-blur)
+							var(--shadow-spread)
+							var(--shadow-color);
+}
+
+button {
+	border-radius: 99px;
+	font-size: 16px;
+	padding: 16px;
+	background-color: var(--background-color);
+	color: var(--main-color);
+	border-color: var(--button-border-color);
+	border-width: 3px;
+	border-style: solid;
+	transition: 0.2s;
+	margin: 0px auto;
+	display: grid;
+}
+
+.icon-energy {
+	background-image: url(/img/icon/energy.svg);
+}
+
+#header-container {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: grid;
+	grid-template-columns: auto 160px;
+	z-index: 50;
+	font-size: 24px;
+	line-height: 50px;
+	height: 50px;
+	background-color: var(--header-color);
+}
+
+#game-title {
+	margin-left: 12px;
+}
+
+.invisible {
+	opacity: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.tint-ui {
+	filter: contrast(0) brightness( var(--tint-ui-b) ) sepia( var(--tint-ui-sep) ) hue-rotate(var(--tint-ui-h)) saturate(var(--tint-ui-s))
+}
+
+.tint-photo {
+	filter: contrast(1) brightness(1) sepia(3) hue-rotate(142deg) saturate(2)
+}
+

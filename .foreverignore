@@ -1,0 +1,10 @@
+**/node_modules/**
+**/public/**
+**/.git/**
+**/log/**
+*.bak
+*.css
+*.gif
+*.png
+*.jpg
+start

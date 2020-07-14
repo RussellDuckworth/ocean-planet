@@ -1,0 +1,159 @@
+/* Species.css */
+
+@keyframes pressed {
+  0% {
+    transform: scale(1.1);
+    filter: brightness(2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+
+@keyframes pressme {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.33);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes barload {
+  0% {
+    width: 8%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.press-me {
+  animation: pressme 1s infinite linear;
+}
+
+.auto-activate {
+  animation: pressed 666ms 0s 1 linear;
+}
+
+.error {
+  color: red;
+}
+
+.affordable {
+  border-color: cyan !important;
+}
+
+.name {
+  height: 0px;
+}
+
+.status-text {
+  position: absolute;
+  margin-top: 42px;
+  width: 100%;
+  font-size: 18px;
+  opacity: 0.33;
+}
+
+.species-container {
+  text-align: center;
+}
+
+.species {
+  transition: 0.2s;
+  margin: 18px;
+  height: 72px;
+  border-radius: 72px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
+
+.progress-container {
+  z-index: -50;
+  margin: 0px 36px;
+}
+
+.progress {
+  width: 0%;
+  height: 70px;
+  border-radius: 72px;
+  border-width: 1px;
+  border-style: solid;
+  background: linear-gradient(180deg,
+    rgba(0, 88,  255, 0.5) 0%,
+    rgba(0, 88,  255, 0.0) 50%,
+    rgba(0, 88,  255, 0.5) 100%
+  );
+}
+
+.portrait {
+  transform-origin: center;
+  background-size: cover;
+  background-position: center;
+  border-width: 3px;
+  border-style: solid;
+  margin: -1px;
+  height: 68px;
+  width: 68px;
+  border-radius: 72px;
+  background-image: url(/img/lipid.png);
+  float: left;
+  border-color: black;
+}
+
+.portrait.robot {
+  margin-top: -73px;
+  position: absolute;
+  right: 18px;
+  background-image: url(/img/robot.png);
+}
+
+.portrait.gray {
+  filter: saturate(0);
+}
+
+.cost-container {
+  background-color: var(--main-color);
+  color: black;
+  border-radius: 12px;
+  padding-right: 10px;
+  font-size: 16px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 16px auto;
+  grid-column-gap: 4px;
+  z-index: 5;
+  float: left;
+  margin-top: -11px;
+}
+
+.cost-container.robot {
+  float: right;
+}
+
+.cost {
+  text-align: center;
+}
+
+.cost-icon {
+  margin: 2px;
+  height: 16px;
+  width: 16px;
+  background-size: contain;
+}
+.cost-icon.robot {
+  left: auto;
+  right: 24px;
+}
+
+.cost.robot {
+  left: auto;
+  right: 2px;
+}

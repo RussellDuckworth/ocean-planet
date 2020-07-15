@@ -220,6 +220,7 @@ export default class Species extends Component
 			}
 		}
 		if (this.robot) {
+			store.removeItem(this.name+'-harvest-start-time');
 			this.startGenerate(remainderTime);
 		}
 	}

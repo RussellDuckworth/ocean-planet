@@ -283,11 +283,7 @@ export default class Species extends Component
 		this.generating = true;
 		let waitTime = this.duration + animationOffset;
 		this.startGenerateTime = Date.now();
-
-		if (timeElapsed === 0) {
-			store.setItem(this.name+'-harvest-start-time', Date.now());
-		}
-
+		store.setItem(this.name+'-harvest-start-time', this.startGenerateTime);
 		this.tickDownTime( waitTime );
 
 		util.wait(waitTime)

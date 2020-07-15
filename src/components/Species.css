@@ -32,6 +32,15 @@
   }
 }
 
+@keyframes flyup {
+  0% {
+    margin-top: 888px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
 .press-me {
   animation: pressme 1s infinite linear;
 }
@@ -62,6 +71,7 @@
 
 .species-container {
   text-align: center;
+  animation: flyup 2s 0s 1 linear;
 }
 
 .species {

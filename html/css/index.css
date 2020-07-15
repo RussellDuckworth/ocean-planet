@@ -74,6 +74,9 @@ button {
 	margin: 0px auto;
 	display: grid;
 }
+button:focus {
+	outline: none;
+}
 
 .icon-energy {
 	background-image: url(/img/icon/energy.svg);

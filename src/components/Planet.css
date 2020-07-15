@@ -3,16 +3,21 @@
 @keyframes roundandround {
   to{ transform: rotate(360deg) }
 }
-
+@keyframes fadein {
+  from{
+    filter: brightness(0);
+  }
+  to{
+    filter: brightness(1);
+  }
+}
 @keyframes moveclouds {
   0% { background-position: 0px 0; }
   100% {  background-position: 999px 0; }
 }
 
 #planet-container {
-  margin-top: 98px;
-  margin-bottom: 54px;
-  margin: 100px auto;
+  margin: 100px auto 62px auto;
   width: 240px;
   height: 240px;
 }
@@ -22,10 +27,10 @@
   width: 240px;
   margin: 0 auto;
   border-radius: 50%;
-  animation: roundandround 99999s 0s infinite linear;
-  box-shadow: -4px -4px 16px -8px #00b5ff;
+  animation: fadein 3s 0s 1 linear;
+  box-shadow: -6px -6px 16px -8px #00b5ff;
   background: radial-gradient(circle at 10% 10%,
-    rgb(122, 230, 255) 0%, rgb(255, 226, 182) 12%, rgb(0, 175, 151) 18%, rgba(0,56,190,1) 45% );
+    rgb(122, 230, 255) 0%, rgb(255, 226, 182) 4%, rgb(0, 175, 151) 18%, rgba(0,56,190,1) 45% );
 }
 
 .planet-new.overlay {

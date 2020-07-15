@@ -1,5 +1,10 @@
 /* Stars.css */
 
+@keyframes starsfadein {
+  from { filter: brightness(0); }
+  to { filter: brightness(1); }
+}
+
 .star {
   position: relative;
   width: 1px;
@@ -15,4 +20,6 @@
 #stars-container {
   position: fixed;
   top: 0px;
+  z-index: -10;
+  animation: starsfadein 1s 0s 1 linear;
 }

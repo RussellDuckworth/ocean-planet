@@ -206,6 +206,7 @@ export default class Species extends Component
 				console.log("no robot");
 				if (numHarvests >= 1) {
 					this.generate( this.production * this.count );
+					store.removeItem(this.name+'-harvest-start-time');
 				} else {
 					console.log("restart manual harvest");
 					this.startGenerate(remainderTime);
